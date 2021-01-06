@@ -1,0 +1,376 @@
+@media screen and (max-width: 1200px) {
+	*{margin: 0;
+	  padding: 0;
+	  	}
+	  .ibox1{
+	 	width: 430px;
+	  	height: 700px;
+	  	background-image: url(../img/九宫格_05.jpg);
+	  	background-size: 430px 700px;
+	  	position: absolute;
+	  	top: 280px;
+	  	left: 0px;
+	  	
+	  }
+	  .ibox2{
+	  	width: 430px;
+	  	height: 300px;
+	  	background-image: url(../img/九宫格_02.jpg);
+	  	background-size: 430px 300px;
+	  	position: relative;
+	  	top: 0px;
+	  	left: 0px;
+	  }
+	  .cj{
+	  	font-size: 20px;
+	  	color: yellow;
+	  	position: absolute;
+	  	bottom: 10px;
+	  	left: 80px;
+	  	height: 20px;
+	  }
+	  .ibox1-1{
+	  	width: 320px;
+	  	height: 320px;
+	  	border: 5px solid red;
+	  	position: absolute;
+	  	top: 30px;
+	  	left: 12%;
+	  	background: white;
+	  }
+	  .list{
+	  	list-style: none;
+	  }
+	  li{
+	  	width: 90px;
+	  	height: 90px;
+	  	border: 3px solid white;
+	  	float: left;
+	  	margin-left: 10px;
+	  	margin-top: 10px;
+	  }
+	  li:nth-child(1){
+	  	/*border: 3px solid royalblue;*/
+	  }
+	  .ibox1-2{
+	  	background-image:url(../img/我的奖品.png);
+	  	background-size: 290px 50px;
+	  	width: 285px;
+	  	height: 50px;
+	  	position: absolute;
+	  	top: 350px;
+	  	left: 15px;
+	  	line-height: 50px;
+	  	font-size: 20px;
+	  	color: yellow;
+	  }
+	  .ibox1-3{
+	  	width: 300px;
+	  	height: 200px;
+	  	position: absolute;
+	  	bottom: 0px;
+	  	left: 60px;
+	  	border: 3px solid red;
+	  	border-top: 0px solid;
+	  	background: white;
+	  	overflow: hidden;
+	  }
+	  .ibox1-3-3{
+	  	position: absolute;
+	  	width: 300px;
+	  	height: 50px;
+	  	bottom: 190px;
+	  	left: 60px;
+	  	border: 3px solid red;
+	  	background: white;
+	  	color: red;
+	  	font-size: 30px;
+	  	
+	  	
+	  }
+	  .zzc{
+				position: fixed;
+				top: 0px;
+				left: 0px;
+				right: 0px;
+				bottom: 0px;
+				background: rgba(0,0,0,0.5);
+			display: none;
+	  }
+	  .zzc2{
+				position: fixed;
+				top: 0px;
+				left: 0px;
+				right: 0px;
+				bottom: 0px;
+				background: rgba(0,0,0,0.5);
+			display: none;
+			
+	  }
+	   .zzc3{
+				position: fixed;
+				top: 0px;
+				left: 0px;
+				right: 0px;
+				bottom: 0px;
+				background: rgba(0,0,0,0.5);
+				z-index: 9;
+			display: none;
+			
+	  }
+	  .ts{
+	  	
+	  	 position: fixed;
+	  	 top: 100px;
+	  	 left: 100px;
+	  	 width: 200px;
+	  	 height: 330px;
+	  	 background: white;
+	  	 display: none;
+	  	border-radius: 20px;
+	  	text-align: center;
+	  	 font-size: 25px;
+	  }
+	  .qd{
+	  	 width: 200px;
+	  	 height: 50px;
+	  	 border-top: 1px solid black;
+	  	 text-align: center;
+	  	 line-height: 40px;
+	  	 font-size: 25px;
+	  }
+	  .yh{
+	  	color: red;
+	  }
+	  .hjry{
+	  	position: absolute;
+	  	top: 30px;
+	  	
+	  }
+	  .gz{
+	  	 position: absolute;
+	  	 top: 100px;
+	  	 left:50px;
+	  	 width: 300px;
+	  	 height: 400px;
+	  	 background: white;
+	  	
+	  	text-align: center;
+	  	 font-size: 25px;
+	  	overflow: scroll;
+	  	display: none;
+	  }
+	  .qd2{
+	  	position: absolute;
+	  	top: 500px;
+	  	width: 300px;
+	  	height: 50px;
+	  	background: white;
+	  	left: 50px;
+	  	text-align: center;
+	  	 font-size: 25px;
+	  	 border-top: 1px solid black;
+	  	 line-height: 50px;
+	  	 display: none;
+	  }
+	  .yz{
+	  	
+	  	 position: fixed;
+	  	 top: 100px;
+	  	 left: 70px;
+	  	 width: 300px;
+	  	 height: 250px;
+	  	 background: white;
+	  	border-radius: 20px;
+	  	text-align: center;
+	  	 font-size: 25px;
+	  	 display: none;
+	  }
+	  .a11{
+	  	font-size: 10px;
+	  	color: red;
+	  	display: none;
+	  }
+	  .a12{
+	  	font-size: 10px;
+	  	color: red;
+	  	display: none;
+	  }
+	  .yzqd{
+	  	position: absolute;
+	  	bottom: 0px;
+	  	left: 0px;
+	  	width: 151px;
+	  	height: 50px;
+	  	border-top: 1px solid #969896;
+	  	border-right: 1px solid #969896;
+	  	line-height: 50px;
+	  	
+	  }
+	  .qued{
+	  	position: absolute;
+	  	bottom: 0px;
+	  	left: 0px;
+	  	width: 151px;
+	  	height: 50px;
+	  	border-top: 1px solid #969896;
+	  	border-right: 1px solid #969896;
+	  	line-height: 50px;
+	  	
+	  }
+	   .yzqx{
+	  	position: absolute;
+	  	right: 0px;
+	  	bottom: 0px;
+	  	width: 147px;
+	  	height: 50px;
+	  	border-top: 1px solid #969896;
+	  	border-left: 1px solid #969896;
+	  	line-height: 50px;
+	  }
+	  .quxiao{
+	  	position: absolute;
+	  	right: 0px;
+	  	bottom: 0px;
+	  	width: 147px;
+	  	height: 50px;
+	  	border-top: 1px solid #969896;
+	  	border-left: 1px solid #969896;
+	  	line-height: 50px;
+	  }
+	  .cjcsyw{
+	  	width: 70%;
+	  	height: 20%;
+	  	background: white;
+	  	position: fixed;
+	  	border-radius: 20px;
+	  	left: 15%;
+	  	top: 40%;
+	  	line-height: 40px;
+	  	text-align: center;
+	  	display: none;
+	  }
+	  .qd22{
+	  	width: 100%;
+	  	height: 30%;
+	  	position: absolute;
+	  	bottom: 0px;
+	  	text-align: center;
+	  	border-top: 1px solid ;
+	  	line-height: 40px;
+	  	font-size: 25px;
+	  }
+	  .thjp{
+	  	width: 320px;
+	  	height: 1100px;
+	  	background: white;
+	  	position: absolute;
+	  	overflow: hidden;
+	  	border: 3px solid red;
+	  	left: 55px;
+     display: none;
+	  }
+	  .wdjpddd{
+	  	position: absolute;
+	  	border-bottom: 1px solid #969896;
+	  	width: 280px;
+	  	height: 50px;
+	  	left: 20px;
+	  	text-align: center;
+	  	font-size: 20px;
+	  	line-height: 50px;
+	  }
+	  .jp1{
+	  	position: absolute;
+	  	width: 280px;
+	  	height: 300px;
+	  	border: 0px solid;
+	  	left: 10px;
+	  	top: 70px;
+	  	text-align: center;
+	  	font-size: 20px;
+	  	line-height: 50px;
+	  	list-style: none;
+	  }
+	  .jp2{
+	  	position: absolute;
+	  	width: 280px;
+	  	height: 300px;
+	  	border: 0px solid;
+	  	left: 10px;
+	  	top:400px;
+	  	text-align: center;
+	  	font-size: 20px;
+	  	line-height: 50px;
+	  	list-style: none;
+	  }
+	   .jp3{
+	  	position: absolute;
+	  	width: 280px;
+	  	height: 300px;
+	  	border: 0px solid;
+	  	left: 10px;
+	  	top:750px;
+	  	text-align: center;
+	  	font-size: 20px;
+	  	line-height: 50px;
+	  	list-style: none;
+	  }
+	  .jp1tup{
+	  	position: absolute;
+	  	width: 280px;
+	  	height: 100px;
+	  	
+	  	border: 1px solid #969896;
+	  	text-align: center;
+	  	font-size: 20px;
+	  	line-height: 50px;
+	  }
+	  .djxx{
+	  	height: 200px;
+	  	position: absolute;
+	  	top: 110px;
+	  	width: 280px;
+	  	border: 0px solid #969896;
+	  	text-align: center;
+	  	font-size: 15px;
+	  	line-height: 20px;
+	  	text-align: left;
+	  }
+	  .ljdj{
+	  	position: absolute;
+	  	bottom: 10px;
+	  	width: 280px;
+	  	height: 50px;
+	  	background: red;
+	  	border-radius: 20px;
+	  	line-height: 50px;
+	  	text-align: center;
+	  	font-size: 30px;
+	  	color: yellow;
+	  }
+	  .yzm{
+	  	position: fixed;
+	  	width: 300px;
+	  	height: 150px;
+	  	background: white;
+	  	border-radius: 20px;
+	  	left: 70px;
+	  	font-size: 30px;
+	  	text-align: center;
+	  	display: none;
+	  }
+	  .jxcj1{
+	  	background-image:url(../img/我的奖品.png);
+	  	background-size: 290px 50px;
+	  	width: 285px;
+	  	height: 50px;
+	  	position: absolute;
+	  	top: 1430px;
+	  	left: 75px;
+	  	line-height: 50px;
+	  	font-size: 20px;
+	  	color: yellow;
+	  	display: none;
+	  }
+}

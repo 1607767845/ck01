@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<link rel="stylesheet" href="css/index_02.css" />
+		<script src="../../day34/上课代码/js/jquery-3.4.1.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			$(function(){
+				var i = 3;
+				var j = 0;
+				var x = 10;
+				var fn;
+				var p = 0 ;
+				$(".btn").bind("click",fn0);
+				function fn0(){
+					$(".btn").unbind("click",fn0);
+					$("li").css("border"," solid 3px white");
+				i--;
+				if(i<0){
+					i=-1;
+				}
+				$(".cs").html(i);
+				if(i!=-1){
+				fn=setInterval(function(){
+					    if(j<3){
+					 	$("li").eq(j-1).css("border"," solid 3px white");
+						$("li").eq(j).css("border","solid 3px royalblue");
+						 p = j;
+						}if(j==3){
+					    	$("li").eq(5).css("border"," solid 3px royalblue");
+					    	$("li").eq(2).css("border"," solid 3px white");
+					     p = 5;	
+					    }
+					    	if(j==4){
+					    		$("li").eq(8).css("border"," solid 3px royalblue");
+					    	$("li").eq(5).css("border"," solid 3px white");
+					    	 p = 8;
+					    	}
+					    	if(j==5){
+					    		$("li").eq(7).css("border"," solid 3px royalblue");
+					    	$("li").eq(8).css("border"," solid 3px white");
+					    	p = 7;
+					    	}
+					    	if(j==6){
+					    		$("li").eq(6).css("border"," solid 3px royalblue");
+					    	$("li").eq(7).css("border"," solid 3px white");
+					    	p = 6;
+					    	}
+					    	if(j==7){
+					    	$("li").eq(3).css("border"," solid 3px royalblue");
+					    	$("li").eq(6).css("border"," solid 3px white");
+					    	p = 3;
+					    	}
+					    	if(j==8){
+					    		$("li").eq(0).css("border"," solid 3px royalblue");
+					    	$("li").eq(3).css("border"," solid 3px white");
+					    	p = 0;
+					    	j=0;
+					    	}
+						j++;
+				},200)
+				setTimeout(function(){
+					$(".btn").bind("click",fn0);
+					$("li").eq(p).addClass("action");
+					for(var t = 0; t<$("li").length;t++){
+						if($("li").eq(t).hasClass("action")){
+							
+							$(".ts").eq(t).show(); 
+							$(".zzc").show();
+							$("li").eq(t).removeClass("action");
+						}
+					}
+					
+					clearInterval(fn);
+					/*$(".zzc").show();
+					$(".ts").show();*/
+				},3800)
+				}else{
+					$(".zzc").show();
+					$(".cjcsyw").show();
+					$(".cs").html("0");
+				}
+				}
+				
+				$(".qd").click(function(){
+					$(".zzc").hide();
+					$(".ts").hide();
+				})
+				$(".qd22").click(function(){
+					$(".zzc").hide();
+					$(".cjcsyw").hide();
+				})
+				var jtop=0;
+				setInterval(function(){
+					jtop=jtop-1;
+		            $(".hjry").css("top",jtop);
+		           if(jtop<=-126){
+			       jtop=0;
+			       $(".hjry").css("top",jtop);
+			       }
+				},100)	
+				$(".yxgz").click(function(){
+					$(".gz").show();
+					$(".qd2").show();
+					/*$(".zzc").show();*/
+					/*$(".zzc2").show();*/
+		            $(".zzc3").show();
+				})
+				$(".qd2").click(function(){
+					$(".gz").hide();
+					$(".qd2").hide();
+					
+					$(".zzc3").hide();
+					
+				})
+				$(".ibox1-2").click(function(){
+					$(".xm").val("");
+					$(".dh").val("");
+					$(".zzc").show();
+					$(".yz").show();
+					$(".a11").hide();
+					$(".a12").hide(); 
+				})
+				$(".yzqd").click(function(){
+					
+					var   reg   =/^(0|86|17951)?(13[0-9]|15[012356789]|17[013678]|18[0-9]|14[57])[0-9]{8}$/ ; 
+					/*lert(reg.test(str));*/
+					
+					if($(".xm").val()==""){
+						$(".a11").show();
+					} else if(!reg.test($(".dh").val())){
+						console.log(reg.test($(".dh").val()));
+						$(".a12").show(); 
+					}else if($(".xm").val()!=""&&reg.test($(".dh").val())){
+						$(".thjp").show();
+						$(".ibox1-1").hide();
+						$(".ibox1-3-3").hide();
+						$(".yz").hide();
+						$(".zzc").hide();
+						$(".ibox1-3").hide();
+						if(i==3){
+							$(".thjp").css("height","0px");
+							$(".thjp").css("border","0px solid red");
+						}else if(i==2){
+							$(".thjp").css("height","400px");
+							$(".thjp").css("border","3px solid red");
+						}
+						else if(i==1){
+							$(".thjp").css("height","750px");
+							$(".thjp").css("border","3px solid red");
+						}else if(i==0){
+							$(".thjp").css("height","1100px");
+							$(".thjp").css("border","3px solid red");
+						}
+						$(".ibox1").css("height",1200);
+						$(".ibox1").css("background-size","430px 1200px");
+						$(".jxcj1").show();
+					}
+					
+				})
+				$(".yzqx").click(function(){
+					$(".zzc").hide();
+					$(".yz").hide();
+				})
+				
+				
+				
+				$(".ljdj").bind("click",fn);
+				var obj11;
+	          function fn(){
+		        $(this).unbind("click",fn);
+		       $(".djmm").val("");
+		       $(".zzc2").show();
+		       $(".zzc3").show();
+		       $(".yzm").show();
+		       obj11=$(this);
+		//确定
+		$(".qued").click(function(){
+			var vl=$(".djmm").val();
+			if(vl==1234){
+				$(".zzc2").hide();
+		       $(".zzc3").hide();
+				$(".yzm").hide();
+				obj11.html("已兑奖");
+			}
+		})
+			$(".quxiao").click(function(){
+			$(".zzc2").hide();
+		       $(".zzc3").hide();
+			$(".yzm").hide();
+			obj11.bind("click",fn);
+		})
+		}
+	          $(".jxcj1").click(function(){
+	          	$(".thjp").show();
+						$(".ibox1-1").show();
+						$(".ibox1-3-3").show();
+						$(".yz").hide();
+						$(".zzc").hide();
+						$(".ibox1-3").show();
+						$(".ibox1").css("height",700);
+						$(".ibox1").css("background-size","430px 700px");
+						$(".jxcj1").hide();
+						$(".thjp").hide();
+	          })
+			})
+		</script>
+	</head>
+	<body>
+		<div class="zzc3">
+			<div class="yzm">
+			<span>兑奖密码</span><br />
+			<input type="text"  class="djmm" maxlength="4"  />
+			<div class="qued">確定</div>
+			<div class="quxiao">取消</div>
+			</div>
+			<div class="gz">
+			<p>游戏规则</p>
+			<p align="left">1. 每名客户每天抽奖有3次机会，点击转盘的【开始抽奖】按钮进行抽奖，转动结束停留的位置就是您获得的奖品；
+<br />
+2. 中奖后需填写姓名、电话，兑奖时根据您的填写的信息进行现场兑奖，具体奖项如下：
+<br />
+黄封村人参酒两瓶：共100份，总价值12000元
+<br />
+莱沃口腔储值卡：共50份，总价值10000元
+<br />
+中国联通流量卡：共200份，总价值10000元
+<br />
+S5健身俱乐部贵宾卡：共有80份，总价值8000元
+<br />
+圣雅瑜伽SPA会所储值卡：共3份，总价值6000元
+<br />
+陶进二胡工作室：共20份，总价值6000元
+<br />
+蛋壳科技VR体验卡：共50份，总价值2500元
+<br />
+3. 抽奖时间：
+<br />
+2021年1月1日~3日游戏时间：每天10：00~23：59：59
+<br />
+4. 各奖品兑奖方式及时间不同，具体如下：
+<br />
+1) 黄封村人参酒
+<br />
+兑奖时间：截止到2021年2月26日
+<br />
+兑奖地址：吉林省酒文化博物馆（亚泰大街9699号）
+<br />
+联系电话：0431-88508899
+<br />
+2) 莱沃口腔储值卡
+<br />
+兑奖时间：截止到2021年2月31日
+<br />
+兑奖地址：工农大路1780号（省中医院东侧）
+<br />
+联系电话：0431—89545888
+<br />
+注：洗牙4次（不限本人使用）；口腔体检；
+<br />
+3) 中国联通流量卡
+<br />
+兑奖时间：截止到2021年3月1日
+<br />
+兑奖地址：长春市内联通营业厅登记统一存入
+<br />
+联系电话：无
+<br />
+注：2G/3G用户500M流量；4G用户1G流量;异地号码，非正常在用号码、已有相同流量包、融合套餐等不能使用
+<br />
+4) S5健身俱乐部贵宾卡
+<br />
+兑奖时间：截止到2021年4月30日
+<br />
+兑奖地址：
+<br />
+南关区幸福街与蔚山路交会处绿地中央广场盘古家宴旁
+<br />
+高新区荷园路与华光街交会处东行50米安联国际
+<br />
+绿园区景阳大路与春城大街交会处北行150米
+<br />
+联系电话：
+<br />
+0431—81887555；
+<br />
+0431—80811555；
+<br />
+0431—88006122
+<br />
+注：3店通用；单天无时间限制，器材限制使用；
+<br />
+5) 圣雅瑜伽SPA会所储值卡
+<br />
+兑奖时间：截止到2021年7月1日
+<br />
+兑奖地址：飞跃东路林田创客公园D栋2楼彩练新闻
+<br />
+联系电话：13943017772
+<br />
+注：每人限用1张；不含服装、垫子等费用；
+<br />
+6) 陶进二胡工作室
+<br />
+兑奖时间：截止到2021年12月31日
+<br />
+兑奖地址：飞跃东路林田创客公园D栋2楼彩练新闻
+<br />
+联系电话：13943017772
+<br />
+注：学习二胡免一次课时费；
+<br />
+7) 蛋壳科技VR体验卡
+<br />
+兑奖时间：截止到2021年7月1日
+<br />
+兑奖地址：
+<br />
+同志街与同光路交会处联通营业厅；
+<br />
+联通营业厅前进大街店；
+<br />
+联系电话：无
+<br />
+注意：VR互动实战体验一次
+<br />
+活动最终解释权归彩练新闻所有。
+</p>
+		</div>
+		<div class="qd2">
+			确定
+		</div>
+		
+			</div>
+		<div class="ibox1">
+			<div class="ibox1-1">
+				<ul class="list">
+					<li><img src="img/sudoku_01.jpg" width="90" height="90"/></li>
+					<li><img src="img/sudoku_02.jpg" width="90" height="90"/></li>
+					<li><img src="img/sudoku_03.jpg" width="90" height="90"/></li>
+					<li><img src="img/sudoku_04.jpg" width="90" height="90"/></li>
+					<li class="btn"><img src="img/sudoku_05.jpg" width="90" height="90"/></li>
+					<li><img src="img/sudoku_06.jpg" width="90" height="90"/></li>
+					<li><img src="img/sudoku_07.jpg" width="90" height="90"/></li>
+					<li><img src="img/sudoku_08.jpg" width="90" height="90"/></li>
+					<li><img src="img/sudoku_09.jpg" width="90" height="90"/></li>
+				</ul>
+				<div align="center" class="ibox1-2">我的奖品</div>
+				
+			</div>
+			<div class="ibox1-3-3">
+				<h3>已发出奖品：</h3>
+			</div>
+			<div class="ibox1-3">
+			<div class="hjry">
+				<br />
+				<p>137****9545 获得黄封村人参酒两瓶</p>
+					<p>137****9545 获得黄封村人参酒两瓶</p>
+					<p>137****9545 获得黄封村人参酒两瓶</p>
+					<p>137****9545 获得黄封村人参酒两瓶</p>
+					<p>137****9545 获得黄封村人参酒两瓶</p>
+					<p>137****9545 获得黄封村人参酒两瓶</p>
+					<p>137****9545 获得黄封村人参酒两瓶</p>
+					<p>137****9545 获得黄封村人参酒两瓶</p>
+					<p>137****9545 获得黄封村人参酒两瓶</p>
+					<p>137****9545 获得黄封村人参酒两瓶</p>
+					<p>137****9545 获得黄封村人参酒两瓶</p>
+					<p>137****9545 获得黄封村人参酒两瓶</p>
+					<p>137****9545 获得黄封村人参酒两瓶</p>
+					<p>137****9545 获得黄封村人参酒两瓶</p>
+					<p>137****9545 获得黄封村人参酒两瓶</p>
+					<p>137****9545 获得黄封村人参酒两瓶</p>
+					<p>137****9545 获得黄封村人参酒两瓶</p>
+					<p>137****9545 获得黄封村人参酒两瓶</p>
+			</div>
+			</div>
+		</div>
+		<div class="ibox2">
+			<div class="cj">抽奖次数：<span class="cs">3</span> &nbsp;次&nbsp;&nbsp;&nbsp;<span class="yxgz">游戏规则</span></div>
+		</div>
+		<div class="zzc">
+		</div>
+		<div class="cjcsyw">
+			<p>提示</p>
+			<p class="yh">抽奖次数已用完，请下次再来！</p>
+			<div class="qd22">确定</div>
+		</div>
+		<div class="ts">
+				<p>提示</p>
+				<p class="yh">恭喜你！中獎了！</p>
+				<img src="img/sudoku_01.jpg" />
+				<p>下次抽奖更幸运！</p>
+				<div class="qd">确定</div>
+			</div>
+			<div class="ts">
+				<p>提示</p>
+				<p class="yh">恭喜你！中獎了</p>
+				<img src="img/sudoku_02.jpg" />
+				<p>下次抽奖更幸运！</p>
+				<div class="qd">确定</div>
+			</div>
+		
+			<div class="ts">
+				<p>提示</p>
+				<p class="yh">恭喜你！中獎了</p>
+				<img src="img/sudoku_03.jpg" />
+				<p>下次抽奖更幸运！</p>
+				<div class="qd">确定</div>
+			</div>
+		
+			<div class="ts">
+				<p>提示</p>
+				<p class="yh">很遗憾，没有抽中</p>
+				<img src="img/sudoku_04.jpg" />
+				<p>下次抽奖更幸运！</p>
+				<div class="qd">确定</div>
+			</div>
+		
+			<div class="ts">
+				<p>提示</p>
+				<p class="yh">恭喜你！中獎了</p>
+				<img src="img/sudoku_05.jpg" />
+				<p>下次抽奖更幸运！</p>
+				<div class="qd">确定</div>
+			</div>
+		
+			<div class="ts">
+				<p>提示</p>
+				<p class="yh">恭喜你！中獎了</p>
+				<img src="img/sudoku_06.jpg" />
+				<p>下次抽奖更幸运！</p>
+				<div class="qd">确定</div>
+			</div>
+		
+			<div class="ts">
+				<p>提示</p>
+				<p class="yh">恭喜你！中獎了</p>
+				<img src="img/sudoku_07.jpg" />
+				<p>下次抽奖更幸运！</p>
+				<div class="qd">确定</div>
+			</div>
+		
+			<div class="ts">
+				<p>提示</p>
+				<p class="yh">恭喜你！中獎了</p>
+				<img src="img/sudoku_08.jpg" />
+				<p>下次抽奖更幸运！</p>
+				<div class="qd">确定</div>
+			</div>
+			<div class="ts">
+				<p>提示</p>
+				<p class="yh">很遺憾，沒有中獎</p>
+				<img src="img/sudoku_09.jpg" />
+				<p>下次抽奖更幸运！</p>
+				<div class="qd">确定</div>
+			</div>
+		
+		<div class="yz">
+			<p>輸入信息</p>
+			<p>姓名：</p>
+			<input type="text"  class="xm" maxlength="8"  />
+			<p class="a11">姓名不能為空</p>
+			<p>電話：</p>
+			<input type="text"  class="dh" maxlength="12"  />
+			<p class="a12">電話不合法</p>
+			<div class="yzqd">確定</div>
+			<div class="yzqx">取消</div>
+		</div>
+		<div class="zzc2">
+			</div>
+		<div class="thjp">
+			
+			<div class="wdjpddd"><h2>我的奖品</h2></div>
+			<ul>
+			<li class="jp1">
+				<div class="jp1tup">
+					<img src="img/莱沃口腔储值卡.jpg" width="100" height="100" />
+				</div >
+				<div class="djxx">
+				<span>奖品：莱沃口腔储值卡</span><br />
+				<span>中奖时间：2020年12月32日12点00分</span><br />
+				<span>兑奖时间：截止2019年年12月32日12点00分</span><br />
+				<span>兑奖地址：来217青年公寓b326找牛子辉，叫他给</span><br />
+				<span>联系电话：13152535615</span>
+				<div class="ljdj">立即兑奖</div>
+				
+			</li>
+			<li class="jp2">
+				
+				<div class="jp1tup">
+					<img src="img/圣雅瑜伽SPA会所储值卡.jpg" width="100" height="100" />
+				</div >
+				<div class="djxx">
+				<span>奖品：SPA会所瑜伽卡</span><br />
+				<span>中奖时间：2020年12月32日12点00分</span><br />
+				<span>兑奖时间：截止2019年年12月32日12点00分</span><br />
+				<span>兑奖地址：来217青年公寓b326找牛子辉，叫他给</span><br />
+				<span>联系电话：13152535615</span>
+				<div class="ljdj">立即兑奖</div>
+				</div>
+			</li>
+			<li class="jp3">
+				
+				<div class="jp1tup">
+					<img src="img/蛋壳科技VR体验卡.png" width="100" height="100" />
+				</div >
+				<div class="djxx">
+				<span>奖品：蛋壳科技体验卡</span><br />
+				<span>中奖时间：2020年12月32日12点00分</span><br />
+				<span>兑奖时间：截止2019年年12月32日12点00分</span><br />
+				<span>兑奖地址：来217青年公寓b326找牛子辉，叫他给</span><br />
+				<span>联系电话：13152535615</span>
+				<div class="ljdj">立即兑奖</div>
+				</div>
+			</li>
+			</ul>
+			</div>
+		</div>
+		<div align="center" class="jxcj1">继续抽奖</div>
+		
+			
+		
+	</body>
+</html>
